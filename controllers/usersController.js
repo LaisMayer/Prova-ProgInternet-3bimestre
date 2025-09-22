@@ -3,7 +3,6 @@ import jwt from "jwt-simple";
 import path from "./server/data/usuarios.json";
 import SECRET_KEY from process.env.JWT_SECRET;
 
-
 exports.criarUsuario = (req, res) => {
   const { username, password } = req.body;
   const usuarios = lerUsuarios();

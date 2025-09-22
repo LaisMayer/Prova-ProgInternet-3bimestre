@@ -20,7 +20,6 @@ exports.login = (req, res) => {
   if (!usuario) {
     return res.status(401).json({ message: 'Usuário ou senha inválidos' });
   }
-
   const payload = { username: usuario.username };
   const token = jwt.encode(payload, SECRET_KEY);
 

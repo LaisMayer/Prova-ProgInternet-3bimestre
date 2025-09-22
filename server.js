@@ -7,11 +7,10 @@ import rotasItens from "./routes/auth.js";
 import rotasLogin from "./routes/users.js";
 
 const app = express();
-
 app.use(bodyParser.json());
 
-app.use("/login", auth);
-app.use("/itens", users);
+app.use("routes/", auth);
+app.use("routes/", users);
 
 const PORT = 3000;
 app.listen(PORT, () => {
